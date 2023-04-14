@@ -1,0 +1,12 @@
+version: '3'
+services:
+  my-hello-world-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/my-hello-world-app
+    environment:
+      NODE_ENV: production
